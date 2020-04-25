@@ -1,7 +1,8 @@
 Challenge
 ====================================
 
-LINK TO APK: https://drive.google.com/file/d/1qDK5EhVWqR01VyKWao1P6OVKFiYNpj3e/view?usp=sharing
+# Update
+I left you the APK link here but I had to delete it because your api works only with `http` and android doesn't permit request with only `http` since API28 in Release MODE, so.. you will have to test it only in Debug mode for android and ios, let me know any doubt you have
 
 This project was generated with this open source bootstrap: `wolmo-bootstrap-react-native` where I made a lot of contributions.
 
