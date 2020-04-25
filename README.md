@@ -2,7 +2,7 @@ Challenge
 ====================================
 
 # Update
-I left you the APK link here but I had to delete it because your api works only with `http` and android doesn't permit request with only `http` since API28 in Release MODE, so.. you will have to test it only in Debug mode for android and ios, let me know any doubt you have
+I left you the APK link here but I had to delete it because your api works only with `http` and android doesn't permit request with `http` since API28 (in Release MODE), it only accepts request with `https`. so.. you will have to test it only in Debug mode for android and ios, let me know any doubt you have
 
 This project was generated with this open source bootstrap: `wolmo-bootstrap-react-native` where I made a lot of contributions.
 
