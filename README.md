@@ -1,10 +1,13 @@
 Challenge
 ====================================
 
+This project was generated with this open source bootstrap: `wolmo-bootstrap-react-native` where I made a lot of contributions.
+
 ## Some Images
 
 <img src="https://i.ibb.co/y0HvDR4/Screen-Shot-2020-04-25-at-17-31-38.png" title="felire" width="200" height="500">
 <img src="https://i.ibb.co/MCv5xCC/Screen-Shot-2020-04-25-at-17-31-48.png" title="felire" width="200" height="500">
+
 # Prerequisites
 
 Follow the [official guide](https://facebook.github.io/react-native/docs/getting-started.html) to properly setup your environment.
@@ -27,12 +30,12 @@ OTHER_ENV_VARs=XXXXXXXXXX
 
 ```
 
-Where the `API_BASE_URL` is the debug url api.
+Where the `API` is the debug url api.
 
 Then create the `.env.production` file on the root too, with the same data that the last,
 but the `API` must be the production url api.
 
-#Important
+# IMPORTANT
 Here I left you the .dev.env so you can test the app. You also could create .stage.env and .production.env. To run the app in different environments, in this case all the .env are the same:
 
 ```
