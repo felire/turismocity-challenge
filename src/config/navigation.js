@@ -27,14 +27,9 @@ export const mainSwitchNavConfig = {
   initialRouteName: Routes.InitialLoading
 };
 
-export const authStackNavConfig = {
-  defaultNavigationOptions: defaultNavOptions,
-  initialRouteName: Routes.Login
-};
-
 export const appStackNavConfig = {
   defaultNavigationOptions: defaultNavOptions,
-  initialRouteName: Routes.Home
+  initialRouteName: Routes.GalleryApp
 };
 
 // Default nav options for all screens
@@ -49,9 +44,7 @@ export const appScreensNavOptions = {
 };
 
 export const statusBarStyles = {
-  // TODO: Change these styles to customize the status bar
-  [Routes.Login]: statusBarConfig.blueStatusBar,
-  [Routes.InitialLoading]: statusBarConfig.whiteStatusBar,
-  [Routes.Home]: statusBarConfig.blueStatusBar,
+  [Routes.ImageDetail]: statusBarConfig.whiteStatusBar,
+  [Routes.GalleryApp]: statusBarConfig.blueStatusBar,
   default: statusBarConfig.transparentStatusBar
 };

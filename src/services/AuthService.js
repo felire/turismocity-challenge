@@ -1,32 +1,30 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import api from '@config/api';
+import Config from 'react-native-config';
 import { actionCreators as authActions } from '@redux/auth/actions';
 
-// TODO: Adapt returned object to:
-//   sessionToken: usually currentUser.access_token
-//   renewId: usually currentUser.renew_id
-//   Also don't forget to add any relevant user data needed for your app.
-const formatUser = currentUser => currentUser;
+const AUTH_EP = '/auth';
 
-export const setCurrentUser = currentUser => {
-  api.setHeader('Authorization', currentUser.sessionToken);
-  return AsyncStorage.setItem('@Auth:currentUser', JSON.stringify(formatUser(currentUser)));
+export const setCurrentToken = currentToken => {
+  api.setHeader('Authorization', `Bearer ${currentToken}`);
+  return AsyncStorage.setItem('@Auth:currentToken', JSON.stringify(currentToken));
 };
-export const getCurrentUser = () => AsyncStorage.getItem('@Auth:currentUser').then(JSON.parse);
-export const removeCurrentUser = () => AsyncStorage.removeItem('@Auth:currentUser');
+export const getCurrentToken = () => AsyncStorage.getItem('@Auth:currentToken').then(JSON.parse);
+export const removeCurrentToken = () => AsyncStorage.removeItem('@Auth:currentToken');
 
+export const getCurrentTokenFromApi = () => api.post(AUTH_EP, { apiKey: Config.API_KEY });
 export const authSetup = async dispatch => {
-  const currentUser = await getCurrentUser();
-  if (currentUser) {
-    api.setHeader('Authorization', currentUser.sessionToken);
+  const currentToken = await getCurrentToken();
+  if (currentToken) {
+    api.setHeader('Authorization', `Bearer ${currentToken}`);
+  } else {
+    const apiResult = await getCurrentTokenFromApi();
+    if (apiResult.ok) {
+      const {
+        data: { token }
+      } = apiResult;
+      await setCurrentToken(token);
+    }
   }
-  dispatch(authActions.init(currentUser));
+  dispatch(authActions.init());
 };
-
-export const login = () =>
-  // TODO: Implement call to authentication API here
-  new Promise(resolve => {
-    setTimeout(() => {
-      resolve({ ok: true, data: { sessionToken: 'token' } });
-    }, 750);
-  });

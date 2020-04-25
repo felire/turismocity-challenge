@@ -33,7 +33,7 @@ const CustomButton = props => {
 };
 
 CustomButton.defaultProps = {
-  activeOpacity: 1
+  activeOpacity: 0.7
 };
 
 CustomButton.propTypes = {

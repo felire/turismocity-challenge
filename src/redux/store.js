@@ -9,6 +9,7 @@ import { fetchMiddleware, configureMergeState } from 'redux-recompose';
 import Navigator from '@components/AppNavigator/navigator';
 
 import auth from './auth/reducer';
+import images from './images/reducer';
 
 const nav = createNavigationReducer(Navigator);
 
@@ -16,6 +17,7 @@ configureMergeState((state, diff) => state.merge(diff));
 
 const reducers = combineReducers({
   auth,
+  images,
   nav
 });
 
@@ -30,7 +32,6 @@ middlewares.push(thunk);
 
 /* ------------- Redux-Recompose Middleware ------------- */
 middlewares.push(fetchMiddleware);
-
 
 /* ------------- Assemble Middleware ------------- */
 enhancers.push(applyMiddleware(...middlewares));

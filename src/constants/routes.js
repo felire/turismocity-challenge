@@ -1,9 +1,8 @@
 const Routes = {
-  Auth: 'Auth',
-  Login: 'Login',
-  InitialLoading: 'InitialLoading',
+  GalleryApp: 'GalleryApp',
+  ImageDetail: 'ImageDetail',
   App: 'App',
-  Home: 'Home'
+  InitialLoading: 'InitialLoading'
 };
 
 export default Routes;
