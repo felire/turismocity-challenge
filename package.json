@@ -40,7 +40,6 @@
     "react-native-config": "^1.0.0",
     "react-native-gesture-handler": "1.5.3",
     "react-native-image-pan-zoom": "^2.1.11",
-    "react-native-image-zoom": "^0.32.0",
     "react-native-localize": "^1.4.0",
     "react-native-reanimated": "^1.8.0",
     "react-native-safe-area-context": "^0.7.3",
