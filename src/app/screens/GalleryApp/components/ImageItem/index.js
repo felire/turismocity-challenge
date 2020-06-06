@@ -4,11 +4,11 @@ import Routes from '@constants/routes';
 
 import styles from './styles';
 
-const ImageItem = ({ navigation, imageUrl, id }) => {
-  const onPress = () => navigation.navigate(Routes.ImageDetail, { id });
+const ImageItem = ({ navigation, item }) => {
+  const onPress = () => navigation.navigate(Routes.ImageDetail, { item });
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Image source={{ uri: imageUrl }} style={styles.image} />
+      <Image source={{ uri: item?.downloadUrl }} style={styles.image} />
     </TouchableOpacity>
   );
 };

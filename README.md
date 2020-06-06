@@ -42,8 +42,7 @@ but the `API` must be the production url api.
 Here I left you the .dev.env so you can test the app. You also could create .stage.env and .production.env. To run the app in different environments, in this case all the .env are the same:
 
 ```
-API=http://195.39.233.28:8035
-API_KEY=23567b218376f79d9415
+API=https://picsum.photos/v2
 ```
 -----------
 

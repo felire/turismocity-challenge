@@ -1,36 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { WINDOW_WIDTH, WINDOW_HEIGHT } from '@constants/platform';
-import { green } from '@constants/colors';
 
-const DELTA = 20;
-export const WIDTH = WINDOW_WIDTH - DELTA;
-export const HEIGHT = WINDOW_HEIGHT / 2;
 export default StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center'
+    width: '100%'
   },
-  imageContainer: {
-    flex: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'stretch'
-  },
-  image: {
-    width: WIDTH,
-    height: HEIGHT
+  innerContainer: {
+    flex: 1
   },
   footer: {
-    flexDirection: 'row',
     flex: 1,
-    alignSelf: 'stretch',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-end',
     paddingHorizontal: 10
-  },
-  shareButton: {
-    backgroundColor: green
   }
 });
